@@ -18,7 +18,8 @@ class NewToutiao:
             self.type = "profile_collection"
         elif type_ == "问答":
             self.type = "profile_wenda"
-        self.js = execjs.compile(open("new_sign.js", "r",encoding="utf-8").read())
+        # self.js = execjs.compile(open("new_sign.js", "r",encoding="utf-8").read())
+        self.js = execjs.compile(open("头条.js", "r", encoding="utf-8").read())
         self.max_behot_time = 0
         self.url = url
         self.token = self.url.split('/')[-1]
